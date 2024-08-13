@@ -39,6 +39,12 @@ android {
 }
 
 dependencies {
+    implementation (libs.androidx.recyclerview.v121)
+    implementation (libs.circleimageview)
+    implementation (libs.androidx.lifecycle.runtime.ktx)
+    implementation (libs.androidx.lifecycle.livedata.core.ktx)
+    implementation (libs.androidx.lifecycle.viewmodel.ktx)
+    implementation (libs.androidx.lifecycle.livedata.ktx)
     implementation (libs.glide)
     implementation (libs.okhttp)
     implementation (libs.logging.interceptor)
@@ -49,6 +55,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.recyclerview)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

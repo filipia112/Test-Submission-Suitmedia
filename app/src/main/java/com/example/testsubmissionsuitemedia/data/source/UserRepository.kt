@@ -1,4 +1,4 @@
-package com.example.testsubmissionsuitemedia
+package com.example.testsubmissionsuitemedia.data.source
 
 import com.example.testsubmissionsuitemedia.data.source.remote.network.Apiretrofit
 import com.example.testsubmissionsuitemedia.data.source.remote.network.response.Apiresponse
@@ -10,7 +10,7 @@ import retrofit2.HttpException
 class UserRepository {
     private val apiService = Apiretrofit.apiService
 
-    fun getUsers(page: Int, perPage: Int): Flow<Resource<Apiresponse>> = flow {
+    fun getAllUsers(page: Int, perPage: Int): Flow<Resource<Apiresponse>> = flow {
         try {
             emit(Resource.Loading())
             val response = apiService.getUsers(page, perPage)

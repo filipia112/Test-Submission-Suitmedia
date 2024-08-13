@@ -12,4 +12,9 @@
     <string name="ok">OK</string>
     <string name="welcome">Welcome</string>
     <string name="not_empty">Name cannot be empty</string>
+    <string name="fullname">Fullname</string>
+    <string name="full_name_format">%1$s %2$s</string>
+    <string name="error_network">Network error. Please check your connection.</string>
+    <string name="error_http">HTTP error occurred. Please try again later.</string>
+    <string name="error_generic">An unexpected error occurred. Please try again.</string>
 </resources>

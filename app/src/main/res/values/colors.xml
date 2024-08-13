@@ -7,4 +7,6 @@
     <color name="border_light">#E2E3E4</color>
     <color name="hint_Colortext">#5C686777</color>
     <color name="textfilled_Colortext">#5C2F2E34</color>
+    <color name="Colortext_fullname">#04021D</color>
+    <color name="Colortext_email">#686777</color>
 </resources>

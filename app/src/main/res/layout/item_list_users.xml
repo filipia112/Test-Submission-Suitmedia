@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="335dp"
+    android:layout_height="80dp"
+    android:layout_gravity="center"
+    android:background="@android:color/transparent">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/IvUsers"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_gravity="start|top"
+        android:src="@drawable/sample" />
+    <TextView
+        android:id="@+id/tvFullNameUsers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_gravity="start|top"
+        android:layout_marginTop="28dp"
+        android:layout_marginStart="90dp"
+        android:textColor="@color/Colortext_fullname"
+        android:text="@string/fullname"
+        android:textSize="16sp"/>
+    <TextView
+        android:id="@+id/tvEmailUsers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_gravity="start|top"
+        android:layout_marginTop="48dp"
+        android:layout_marginStart="90dp"
+        android:textColor="@color/Colortext_email"
+        android:text="@string/fullname"
+        android:textSize="14sp"/>
+</FrameLayout>
