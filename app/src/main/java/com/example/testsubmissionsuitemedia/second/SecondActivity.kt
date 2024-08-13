@@ -2,6 +2,7 @@ package com.example.testsubmissionsuitemedia.second
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import com.example.testsubmissionsuitemedia.databinding.ActivitySecondBinding
 import com.example.testsubmissionsuitemedia.main.MainActivity
@@ -29,5 +30,10 @@ class SecondActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                finishAffinity()
+            }
+        })
     }
 }
