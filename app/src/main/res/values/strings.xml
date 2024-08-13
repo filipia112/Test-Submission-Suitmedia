@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">TestSubmissionSuitemedia</string>
+    <string name="button">button</string>
+    <string name="check">Check</string>
+    <string name="next">Next</string>
+    <string name="ic_photo">ic_Photo</string>
+    <string name="name">Name</string>
+    <string name="palindrome">Palindrome</string>
+    <string name="truePalindrome">It is Palindrome</string>
+    <string name="falsePalindrome">it is not Palindrome</string>
+    <string name="result">Result</string>
+    <string name="ok">OK</string>
+    <string name="welcome">Welcome</string>
+    <string name="not_empty">Name cannot be empty</string>
+</resources>
