@@ -1,5 +1,6 @@
 package com.example.testsubmissionsuitemedia.third
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +11,7 @@ import com.example.testsubmissionsuitemedia.R
 import com.example.testsubmissionsuitemedia.data.source.Resource
 import com.example.testsubmissionsuitemedia.data.source.UserRepository
 import com.example.testsubmissionsuitemedia.databinding.ActivityThirdBinding
+import com.example.testsubmissionsuitemedia.second.SecondActivity
 import com.example.testsubmissionsuitemedia.ui.UserAdapter
 import com.example.testsubmissionsuitemedia.ui.ViewModelFactory
 import kotlinx.coroutines.flow.launchIn
@@ -23,9 +25,18 @@ class ThirdActivity : AppCompatActivity() {
         binding = ActivityThirdBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        userAdapter = UserAdapter()
+        userAdapter = UserAdapter { selectedUser ->
+            selectedUser.firstName?.let {
+                navigateToSecondActivity(it)
+            }
+        }
         binding.rvUsers.layoutManager = LinearLayoutManager(this)
         binding.rvUsers.adapter = userAdapter
+        binding.btnBack.setOnClickListener{
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
         val viewModelFactory = ViewModelFactory(UserRepository())
         userViewModel = ViewModelProvider(this, viewModelFactory)[UserViewModel::class.java]
         userViewModel.userState.onEach { resource ->
@@ -61,6 +72,11 @@ class ThirdActivity : AppCompatActivity() {
         }.launchIn(lifecycleScope)
 
         userViewModel.fetchUsers(page = 1, perPage = 10)
+    }
+    private fun navigateToSecondActivity(userName: String) {
+        val intent = Intent(this, SecondActivity::class.java)
+        intent.putExtra("EXTRA_USER_NAME", userName)
+        startActivity(intent)
     }
 
 }

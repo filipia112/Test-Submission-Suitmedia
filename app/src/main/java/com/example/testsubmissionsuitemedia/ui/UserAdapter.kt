@@ -8,7 +8,7 @@ import com.example.testsubmissionsuitemedia.R
 import com.example.testsubmissionsuitemedia.data.source.remote.network.response.DataItem
 import com.example.testsubmissionsuitemedia.databinding.ItemListUsersBinding
 
-class UserAdapter : RecyclerView.Adapter<UserAdapter.ListViewHolder>() {
+class UserAdapter(private val onItemClick: (DataItem) -> Unit) : RecyclerView.Adapter<UserAdapter.ListViewHolder>() {
     private var listData = ArrayList<DataItem>()
 
     fun setData(newListData: List<DataItem>?) {
@@ -23,7 +23,6 @@ class UserAdapter : RecyclerView.Adapter<UserAdapter.ListViewHolder>() {
     }
 
     override fun getItemCount() = listData.size
-
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val data = listData[position]
         holder.bind(data)
@@ -39,6 +38,7 @@ class UserAdapter : RecyclerView.Adapter<UserAdapter.ListViewHolder>() {
                 val lastName = data.lastName
                 tvFullNameUsers.text = itemView.context.getString(R.string.full_name_format,firstName,lastName)
                 tvEmailUsers.text = data.email
+                binding.root.setOnClickListener { onItemClick(data) }
             }
         }
     }

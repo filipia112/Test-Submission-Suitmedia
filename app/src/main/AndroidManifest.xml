@@ -13,13 +13,13 @@
         android:theme="@style/Theme.TestSubmissionSuitemedia"
         tools:targetApi="31">
         <activity
-            android:name=".main.MainActivity"
+            android:name=".third.ThirdActivity"
             android:exported="false" />
         <activity
             android:name=".second.SecondActivity"
             android:exported="false" />
         <activity
-            android:name=".third.ThirdActivity"
+            android:name=".main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

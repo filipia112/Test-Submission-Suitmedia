@@ -17,4 +17,9 @@
     <string name="error_network">Network error. Please check your connection.</string>
     <string name="error_http">HTTP error occurred. Please try again later.</string>
     <string name="error_generic">An unexpected error occurred. Please try again.</string>
+    <string name="button_back">Back</string>
+    <string name="choose_a_user">Choose a user</string>
+    <string name="selected_username">Selected User Name</string>
+    <string name="second_screen">Second Screen</string>
+    <string name="third_screen">Third Screen</string>
 </resources>
